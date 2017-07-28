@@ -1,18 +1,20 @@
 html {
   font-size: 18px;
-  line-height: 1.4;
 }
 
 body {
   background-color: white;
   color: black;
   font-family: Helvetica, sans-serif;
+  line-height: 1.4;
 }
+
 
  /*for development*/
 div, header, footer, span, nav, li {
   border: 1px solid orange;
 }
+
 
 
 /* common class properties */
@@ -36,6 +38,8 @@ div, header, footer, span, nav, li {
   color: black;
 }
 
+
+
 /* header and footer */
 header {
   background-image: url(../images/glasses-bg.png); 
@@ -45,6 +49,7 @@ header {
   height: 30rem;
   padding-top: 1rem;
 }
+
 header .site-container, footer .site-container {
   align-items: center;
   display: flex;
@@ -67,14 +72,43 @@ header .site-container, footer .site-container {
   padding: 4rem 1rem 4rem 4rem;
 }
 
-@media only screen and (max-width: 470px) {
-  /* mobile view */
-  footer  {
-    display: flex;
-    justify-content: center;
+@media only screen and (max-width: 1024px) {
+  /* tablet view */
+  .site-container {
+    max-width: 100%;
   }
   
+  header {
+    height: 22rem;
+    padding: 0;
+  }
 }
+
+@media only screen and (max-width: 472px) {
+  /* mobile view */
+  header {
+    background-position: 20%; 
+    height: 17rem;
+  }
+
+  #business-name span {
+    display: none;
+  }
+
+  footer .site-container {
+    justify-content: center;
+  }
+
+  footer span {
+    display: none;
+  }
+
+  #logo-footer {
+    padding: 4rem 0;
+  }
+}
+
+
 
 /* navigation */
 nav {
@@ -107,7 +141,7 @@ nav span {
   justify-content: center;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 472px) {
   /* tablet view */
   #nav-items {
     display: none;
@@ -117,6 +151,8 @@ nav span {
     display: flex;
   }
 }
+
+
 
 /* tagline banner */
 #banner {
@@ -136,131 +172,141 @@ nav span {
     padding: 1.5rem 5rem;
 }
 
-  #feature h4 {
-    font-size: 0.77rem;
+@media only screen and (max-width: 1024px) {
+  /* tablet view */
+  #tagline {
+    margin-right: 2rem;
+    margin-top: 5rem;
   }
 
-  
+  #tagline h1 {
+    font-size: 1.33rem;
+    padding: 0.75rem 4rem;
+  }
+}
 
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 472px) {
   /* mobile view */
-  #banner {
-    height: 15rem;
-  } 
-
-  #banner .site-container {
-    padding-top: 10rem;
-  }  
-  
-  #feature {
-    padding: 1rem 2rem;
-    width: inherit;
+  #tagline {
+    margin: 9rem 0 0 0;
+    width: 100%;
   }
 
-  #feature h4 {
-    font-size: 0.77rem;
-  }
-
-  #feature h1 {
+  #tagline h1 {
     font-size: 1rem;
-    padding-top: 0.25rem;
-  }
+    padding: 1rem 0;
+    text-align: center;
+  } 
 }
 
 
 
-
-/* product list and company info*/
-
-#product-list, #company-info {
+/* service list and business info*/
+#service-list, #business-info {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 3rem 0 0 0;
 }
 
-.product {
-  display: block;
-  width: 30%;
-}
-
-.product-image-container {
+.service {
   align-items: center;
-  border: 4px solid black;
   display: flex;
-  height: 9rem;
-  justify-content: center;
-  padding: 2rem 0;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 8rem;
+  padding: 0 3rem;
+  width: 5rem;
 }
 
-.product-image-container img {
-  max-width: 9rem; 
+.service-image-container {
+  margin-bottom: 1rem;
 }
 
-.product span {
-  background-color: black;
+.service-image-container img {
   display: block;
-  padding: 0.5rem;
+}
+
+.service-icon-landscape {
+  width: 5rem;
+}
+
+.service-icon-portrait {
+  width: 3.5rem;
+}
+
+.service span {
   text-align: center;
+}
+
+#business-info {
+  padding-bottom: 5rem;
 }
 
 .info-item {
   width: 35%;
-  padding-bottom: 4rem;
+}
+
+.info-item-spacing {
+  width: 5%;
 }
 
 .info-item .info-title {
-  background-color: black;
   display: block;
-  padding: 1rem 2rem;
+  font-weight: bold;
+  padding: 0.5rem 1.25rem;
+  width: 10rem;
 }
 
 .info-item .info-detail {
-  color: black;
   display: block;
+  padding-top: 1rem; 
 }
 
-@media only screen and (max-width: 1024px) {
-  /* tablet view */
-  .product {
-    width: 47%;
-  }
-
-  #prd-thermal-glasses {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 472px) {
   /* mobile view */
-  #product-list {
-    justify-content: center;
-  }
-
-  .product {
-    width: 90%;
-  }
-
-  #prd-cellular-watch {
-    display: none;
-  }
-
-   #company-info {
-    align-items: center;
-    display: flex;
+  #service-list, #business-info {
     flex-direction: column;
-    justify-content: center;
-    padding-bottom: 4rem;
+    margin: 3.77rem 0 0 0;
   }
 
+  #service-list {
+    align-items: center;
+  }
+
+  .service  {
+    height: 100%;
+    justify-content: flex-start;
+  }
+
+  .service span {
+    font-size: 0.77rem;
+  }
+
+  .service-icon-landscape {
+    margin-top: 1.54rem;
+  }
 
   .info-item {
-    width: 90%;
-    padding-bottom: 0;
+    width: 100%
+  }  
+
+  .info-item-spacing {
+    height: 4rem;
+  }
+
+  .info-item .info-title {
+    text-align: center;
+    padding: 0.5rem 0;
+    width: 100%;
   }
 
   .info-item .info-detail {
-    padding-bottom: 0.5rem;
+    font-size: 0.77rem;
+    padding: 1rem 0.2rem 0 0.2rem; 
   }
+  
 }
+
+
 
 /* end style.css */
