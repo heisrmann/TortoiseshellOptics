@@ -10,11 +10,12 @@ body {
 }
 
 
- /*for development*/
+ /*
+ for development
 div, header, footer, span, nav, li {
   border: 1px solid orange;
 }
-
+*/
 
 
 /* common class properties */
@@ -304,7 +305,6 @@ nav span {
     font-size: 0.77rem;
     padding: 1rem 0.2rem 0 0.2rem; 
   }
-  
 }
 
 
